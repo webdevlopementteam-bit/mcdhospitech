@@ -32,15 +32,39 @@ import { categories, getSubcategory } from "@/lib/products";
 import { site } from "@/lib/site";
 
 const featured = [
-  ["medical-beds", "icu-bed"],
-  ["neonatal-nicu-care", "baby-incubator"],
-  ["operating-lights", "80-series-led"],
-  ["operating-tables", "electro-hydraulic-operating-table"],
-  ["neonatal-nicu-care", "infant-radiant-warmer"],
-  ["medical-furniture", "stretcher-trolleys"],
-  ["modular-ots", "laminar-ahu"],
-  ["operating-lights", "examination-lights"],
-  ["medical-furniture", "autoclaves"],
+  ["medical-beds", "icu-bed", "/features_product/ICUBED_ICU Bed.jpg"],
+  [
+    "neonatal-nicu-care",
+    "baby-incubator",
+    "/features_product/Baby_Incubator.jpg",
+  ],
+  [
+    "operating-lights",
+    "80-series-led",
+    "/features_product/80_Series_(LED).jpg",
+  ],
+  [
+    "operating-tables",
+    "electro-hydraulic-operating-table",
+    "/features_product/Electro_Hydraulic_Operating_Table.jpg",
+  ],
+  [
+    "neonatal-nicu-care",
+    "infant-radiant-warmer",
+    "/features_product/Infant Radiant Warmer.jpg",
+  ],
+  [
+    "medical-furniture",
+    "stretcher-trolleys",
+    "/features_product/Stretcher Trolleys.jpg",
+  ],
+  ["modular-ots", "laminar-ahu", "/features_product/Laminar & AHU.jpg"],
+  [
+    "operating-lights",
+    "examination-lights",
+    "/features_product/Examination Lights.jpg",
+  ],
+  ["medical-furniture", "autoclaves", "/features_product/autoclaves.jpg"],
 ] as const;
 
 const yearsActive = new Date().getFullYear() - Number(site.founded);
@@ -98,28 +122,37 @@ const process = [
   {
     step: "01",
     title: "Consultation",
-    description: "Share your facility requirements — we recommend the right product configuration.",
+    description:
+      "Share your facility requirements — we recommend the right product configuration.",
   },
   {
     step: "02",
     title: "Engineering & Quote",
-    description: "Detailed technical drawings, specifications and a transparent quotation.",
+    description:
+      "Detailed technical drawings, specifications and a transparent quotation.",
   },
   {
     step: "03",
     title: "Manufacturing",
-    description: "Built under quality checkpoints, from raw material to final assembly.",
+    description:
+      "Built under quality checkpoints, from raw material to final assembly.",
   },
   {
     step: "04",
     title: "Install & Support",
-    description: "On-site installation, staff training and ongoing after-sales service.",
+    description:
+      "On-site installation, staff training and ongoing after-sales service.",
   },
 ];
 
 const contactCards = [
   { icon: Phone, title: "Call Us", value: site.phone, href: site.phoneHref },
-  { icon: Mail, title: "Email Us", value: site.email, href: `mailto:${site.email}` },
+  {
+    icon: Mail,
+    title: "Email Us",
+    value: site.email,
+    href: `mailto:${site.email}`,
+  },
   {
     icon: MessageCircle,
     title: "WhatsApp",
@@ -153,7 +186,7 @@ export default function Home() {
         />
       </section>
 
-      <section className="py-24">
+      <section className="py-15">
         <Container className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
           <div>
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-saffron-600">
@@ -169,19 +202,19 @@ export default function Home() {
 
             <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
               <p>
-                Founded in August {site.founded} in New Delhi, MCD Hospitech
-                has spent over a decade manufacturing, installing and
-                commissioning medical equipment for neonatology, ICU,
-                gynaecology and operating theatres across India — as a
-                registered Micro, Small &amp; Medium Enterprise (MSME).
+                Founded in August {site.founded} in New Delhi, MCD Hospitech has
+                spent over a decade manufacturing, installing and commissioning
+                medical equipment for neonatology, ICU, gynaecology and
+                operating theatres across India — as a registered Micro, Small
+                &amp; Medium Enterprise (MSME).
               </p>
               <p>
                 The company is named in honour of{" "}
                 <span className="font-semibold text-navy-800">
                   Maa Chandrakala Devi
                 </span>
-                , the founder&apos;s mother — a name that carries the same
-                care and trust we bring to every hospital we equip.
+                , the founder&apos;s mother — a name that carries the same care
+                and trust we bring to every hospital we equip.
               </p>
             </div>
 
@@ -194,40 +227,11 @@ export default function Home() {
                 &ldquo;ॐ सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः&rdquo;
               </p>
               <p className="relative mt-2 text-sm text-slate-600">
-                &ldquo;May all be happy, may all be healthy&rdquo; — the
-                guiding philosophy behind our mission to bring innovative,
-                affordable medical technology to hospitals and medical
-                institutions.
+                &ldquo;May all be happy, may all be healthy&rdquo; — the guiding
+                philosophy behind our mission to bring innovative, affordable
+                medical technology to hospitals and medical institutions.
               </p>
             </blockquote>
-
-            <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              {competencies.map(({ icon: Icon, label }) => (
-                <li
-                  key={label}
-                  className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3.5 text-sm font-semibold text-navy-800 shadow-sm shadow-navy-900/5"
-                >
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
-                    <Icon className="h-4 w-4" />
-                  </span>
-                  {label}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8 flex flex-wrap items-center gap-6">
-              <Button href="/about" variant="secondary">
-                Read Our Full Story
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-              <Link
-                href="/about"
-                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-slate-500 transition-colors hover:text-navy-800"
-              >
-                Learn more about our journey
-                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
           </div>
 
           <div>
@@ -279,6 +283,35 @@ export default function Home() {
             </div>
           </div>
         </Container>
+        <div className="mx-4">
+          <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2  lg:grid-cols-4  sm:mx-4">
+            {competencies.map(({ icon: Icon, label }) => (
+              <li
+                key={label}
+                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-3 py-3 sm:px-4 sm:py-3.5 text-sm font-semibold text-navy-800 shadow-sm shadow-navy-900/5"
+              >
+                <span className="flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-saffron-100 text-saffron-600">
+                  <Icon className="h-4 w-4" />
+                </span>
+                {label}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-6 justify-center">
+          <Button href="/about" variant="secondary">
+            Read Our Full Story
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+          <Link
+            href="/about"
+            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-slate-500 transition-colors hover:text-navy-800"
+          >
+            Learn more about our journey
+            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
       </section>
 
       <section className="bg-navy-50 py-24">
@@ -304,14 +337,18 @@ export default function Home() {
             description="A snapshot of our flagship product lines — each one built for durability, safety and everyday clinical performance."
           />
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map(([categorySlug, subcategorySlug]) => {
-              const { subcategory } = getSubcategory(categorySlug, subcategorySlug);
+            {featured.map(([categorySlug, subcategorySlug, image]) => {
+              const { subcategory } = getSubcategory(
+                categorySlug,
+                subcategorySlug,
+              );
               if (!subcategory) return null;
               return (
                 <ProductCard
                   key={subcategorySlug}
                   categorySlug={categorySlug}
                   subcategory={subcategory}
+                  image={image}
                 />
               );
             })}
@@ -394,7 +431,9 @@ export default function Home() {
                 key={title}
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
-                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                rel={
+                  href.startsWith("http") ? "noopener noreferrer" : undefined
+                }
                 className="group rounded-2xl border border-slate-100 p-6 shadow-sm shadow-navy-900/5 transition-all hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy-50 text-navy-700 transition-colors group-hover:bg-saffron-500 group-hover:text-white">
@@ -416,9 +455,7 @@ export default function Home() {
             </div>
 
             <div className="rounded-[2rem] bg-navy-900 p-8 text-white lg:col-span-2">
-              <h3 className="font-display text-lg font-bold">
-                Business Hours
-              </h3>
+              <h3 className="font-display text-lg font-bold">Business Hours</h3>
               <ul className="mt-5 space-y-3 text-sm text-white/70">
                 <li className="flex items-center justify-between">
                   <span className="flex items-center gap-2">

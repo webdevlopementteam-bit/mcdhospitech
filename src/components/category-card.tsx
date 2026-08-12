@@ -61,49 +61,60 @@ export function CategoryCard({ category }: { category: Category }) {
     <Link
       href={`/products/${category.slug}`}
       className={cn(
-        "group relative flex h-80 flex-col overflow-hidden rounded-2xl border bg-gradient-to-br p-7 shadow-sm shadow-navy-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy-900/10",
-        theme.card
+        "group relative flex flex-col overflow-hidden rounded-2xl border bg-gradient-to-br p-5 sm:p-6 lg:p-7 shadow-sm shadow-navy-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy-900/10",
+        "h-64 sm:h-72 lg:h-80",
+        theme.card,
       )}
     >
-      <div
-        className={cn(
-          "relative z-10 flex h-11 w-11 items-center justify-center rounded-xl shadow-sm shadow-navy-900/5",
-          theme.icon
-        )}
-      >
-        <Icon className="h-5 w-5" />
-      </div>
+      {/* Icon + ArrowRight in one row */}
+      <div className="relative z-10 flex items-center justify-between">
+        <div
+          className={cn(
+            "flex h-9 w-9 sm:h-10 sm:w-10 lg:h-11 lg:w-11 items-center justify-center rounded-xl shadow-sm shadow-navy-900/5",
+            theme.icon,
+          )}
+        >
+          <Icon className="h-5 w-5" />
+        </div>
 
-      <div className="relative z-10 mt-5 max-w-[62%]">
-        <h3 className="font-display text-xl font-bold text-navy-900">
-          {category.name}
-        </h3>
-        <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          {category.tagline}
-        </p>
-      </div>
-
-      <div className="relative z-10 mt-auto flex items-end justify-between">
-        <span className={cn("text-sm font-bold", theme.count)}>
-          {category.subcategories.length} product lines
-        </span>
         <span
           className={cn(
-            "flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-md shadow-navy-900/10 transition-colors duration-300",
-            theme.button
+            "flex h-9 w-9 sm:h-10 sm:w-10 lg:h-11 lg:w-11 items-center justify-center rounded-full shadow-md shadow-navy-900/10 transition-colors duration-300",
+            theme.button,
           )}
         >
           <ArrowRight className="h-4 w-4" />
         </span>
       </div>
 
-      <div className="pointer-events-none absolute bottom-0 right-0 h-[85%] w-[62%]">
+      {/* Heading + tagline */}
+      <div className="relative z-10 mt-3 max-w-[70%] lg:max-w-[62%]">
+        <h3 className="font-display text-lg sm:text-xl font-bold text-navy-900">
+          {category.name}
+        </h3>
+        <p className="mt-1 text-xs sm:text-sm leading-relaxed text-slate-600">
+          {category.tagline}
+        </p>
+      </div>
+
+      {/* Product lines count */}
+      <span
+        className={cn(
+          "relative z-10 mt-auto text-xs sm:text-sm font-bold",
+          theme.count,
+        )}
+      >
+        {category.subcategories.length} product lines
+      </span>
+
+      {/* Background image */}
+      <div className="pointer-events-none absolute bottom-0 right-0 h-[45%] sm:h-[55%] lg:h-[70%] w-[45%] sm:w-[50%] lg:w-[55%] z-0">
         <Image
           src={category.image}
           alt=""
           fill
-          sizes="320px"
-          className="object-contain object-bottom mix-blend-multiply"
+          sizes="(max-width: 640px) 160px, (max-width: 1024px) 240px, 300px"
+          className="object-contain object-bottom mix-blend-multiply opacity-80"
         />
       </div>
     </Link>

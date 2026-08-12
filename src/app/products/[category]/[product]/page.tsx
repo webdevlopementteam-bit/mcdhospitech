@@ -9,10 +9,11 @@ import { Button } from "@/components/button";
 import { getIcon } from "@/lib/icon-map";
 import { categories, getSubcategory } from "@/lib/products";
 import { site } from "@/lib/site";
+import Image from "next/image";
 
 export function generateStaticParams() {
   return categories.flatMap((c) =>
-    c.subcategories.map((s) => ({ category: c.slug, product: s.slug }))
+    c.subcategories.map((s) => ({ category: c.slug, product: s.slug })),
   );
 }
 
@@ -23,6 +24,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { category, product } = await params;
   const { subcategory } = getSubcategory(category, product);
+
   if (!subcategory) return {};
   return {
     title: subcategory.product.name,
@@ -40,19 +42,28 @@ export default async function ProductPage({
   if (!category || !subcategory) notFound();
 
   const item = subcategory.product;
-  const Icon = getIcon(item.icon);
-  const related = category.subcategories.filter((s) => s.slug !== subcategory.slug).slice(0, 3);
+  // console.log("item", item);
+
+  const image = category.image;
+  // console.log("img", image);
 
   return (
     <>
       <section className="border-b border-slate-100 bg-navy-50 py-6">
         <Container>
           <nav className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
-            <Link href="/" className="hover:text-navy-800">Home</Link>
+            <Link href="/" className="hover:text-navy-800">
+              Home
+            </Link>
             <ChevronRight className="h-3 w-3" />
-            <Link href="/products" className="hover:text-navy-800">Products</Link>
+            <Link href="/products" className="hover:text-navy-800">
+              Products
+            </Link>
             <ChevronRight className="h-3 w-3" />
-            <Link href={`/products/${category.slug}`} className="hover:text-navy-800">
+            <Link
+              href={`/products/${category.slug}`}
+              className="hover:text-navy-800"
+            >
               {category.name}
             </Link>
             <ChevronRight className="h-3 w-3" />
@@ -63,11 +74,20 @@ export default async function ProductPage({
 
       <section className="py-16">
         <Container className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          <div className="relative flex aspect-square items-center justify-center overflow-hidden rounded-[2rem] bg-gradient-to-br from-navy-800 via-navy-700 to-navy-950">
-            <div className="bg-grid absolute inset-0" />
-            <Icon className="relative h-32 w-32 text-white/90" strokeWidth={1.25} />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 via-transparent to-transparent" />
-            <span className="absolute left-6 top-6 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur">
+          <div className="relative flex aspect-square items-center justify-center overflow-hidden rounded-[2rem] bg-white border border-slate-200">
+            <div className="bg-grid absolute inset-0 opacity-30" />
+
+            <Image
+              src={image}
+              alt={item.name}
+              fill
+              className="relative z-10 object-contain p-8"
+              priority
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-100/40 via-transparent to-transparent" />
+
+            <span className="absolute left-6 top-6 z-20 rounded-full bg-navy-800/90 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur">
               {category.name}
             </span>
           </div>
@@ -110,7 +130,10 @@ export default async function ProductPage({
               </h2>
               <ul className="mt-4 space-y-3">
                 {item.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm text-slate-600">
+                  <li
+                    key={feature}
+                    className="flex items-start gap-3 text-sm text-slate-600"
+                  >
                     <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
                     {feature}
                   </li>
@@ -121,7 +144,7 @@ export default async function ProductPage({
         </Container>
       </section>
 
-      <section className="bg-navy-50 py-16">
+      {/* <section className="bg-navy-50 py-16">
         <Container>
           <SectionHeading eyebrow="Technical Data" title="Specifications" />
           <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white">
@@ -142,14 +165,14 @@ export default async function ProductPage({
             </table>
           </div>
           <p className="mt-4 text-xs text-slate-400">
-            Specifications indicative — configurations can be customised to
-            your facility&apos;s requirements. Contact us for a detailed
-            technical datasheet.
+            Specifications indicative — configurations can be customised to your
+            facility&apos;s requirements. Contact us for a detailed technical
+            datasheet.
           </p>
         </Container>
-      </section>
+      </section> */}
 
-      {related.length > 0 ? (
+      {/* {related.length > 0 ? (
         <section className="py-16">
           <Container>
             <SectionHeading
@@ -167,7 +190,7 @@ export default async function ProductPage({
             </div>
           </Container>
         </section>
-      ) : null}
+      ) : null} */}
     </>
   );
 }

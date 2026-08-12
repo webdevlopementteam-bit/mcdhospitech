@@ -196,7 +196,10 @@ export const categories: Category[] = [
             "Modular bed-head service panels",
           ],
           specs: [
-            { label: "Mattress", value: "High-density PU foam, washable cover" },
+            {
+              label: "Mattress",
+              value: "High-density PU foam, washable cover",
+            },
             { label: "IV Stand", value: "SS304, 5-leg base with castors" },
             { label: "Traction Frame", value: "MS tubular, powder coated" },
           ],
@@ -765,7 +768,10 @@ export const categories: Category[] = [
           ],
           specs: [
             { label: "Mounting", value: "Universal side-rail clamp" },
-            { label: "Material", value: "Stainless steel / radiolucent composite" },
+            {
+              label: "Material",
+              value: "Stainless steel / radiolucent composite",
+            },
           ],
           icon: "Wrench",
         },
@@ -870,7 +876,10 @@ export const categories: Category[] = [
           ],
           specs: [
             { label: "Filtration", value: "HEPA H13 / H14" },
-            { label: "Air Flow", value: "Unidirectional, validated ISO Class 5–7" },
+            {
+              label: "Air Flow",
+              value: "Unidirectional, validated ISO Class 5–7",
+            },
           ],
           icon: "Wind",
         },
@@ -999,7 +1008,10 @@ export const categories: Category[] = [
           specs: [
             { label: "Control", value: "Microprocessor, servo/manual mode" },
             { label: "Heater", value: "Quartz / ceramic infrared element" },
-            { label: "Mattress Tray", value: "Tilt & Trendelenburg adjustable" },
+            {
+              label: "Mattress Tray",
+              value: "Tilt & Trendelenburg adjustable",
+            },
             { label: "Alarms", value: "High/low skin temp, sensor failure" },
           ],
           icon: "ThermometerSun",
@@ -1096,7 +1108,10 @@ export const categories: Category[] = [
           ],
           specs: [
             { label: "Suction Vacuum", value: "0 – 300 mmHg (neonatal range)" },
-            { label: "Resuscitation Set", value: "Bag, mask & airway sizes 0/1" },
+            {
+              label: "Resuscitation Set",
+              value: "Bag, mask & airway sizes 0/1",
+            },
             { label: "Mounting", value: "Mobile trolley" },
           ],
           icon: "Syringe",
@@ -1136,11 +1151,13 @@ export function getCategory(slug: string) {
 
 export function getSubcategory(categorySlug: string, subcategorySlug: string) {
   const category = getCategory(categorySlug);
-  const subcategory = category?.subcategories.find((s) => s.slug === subcategorySlug);
+  const subcategory = category?.subcategories.find(
+    (s) => s.slug === subcategorySlug,
+  );
   return { category, subcategory };
 }
 
 export const allProductCount = categories.reduce(
   (sum, c) => sum + c.subcategories.length,
-  0
+  0,
 );
