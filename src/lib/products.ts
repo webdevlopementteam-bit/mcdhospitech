@@ -56,7 +56,7 @@ export const categories: Category[] = [
         blurb: "Multi-function electric & manual critical-care beds",
         product: {
           slug: "icu-bed",
-          image: "/features_product/icu-bed.jpg",
+          image: "/medical_beds/icu-bed.jpg",
           name: "ICU Bed — 5 Function Electric",
           tagline: "Critical-care positioning at the touch of a button",
           description:
@@ -80,12 +80,14 @@ export const categories: Category[] = [
           icon: "BedDouble",
         },
       },
+
       {
         slug: "fowler-bed",
         name: "Fowler Bed",
         blurb: "Manual & hydraulic general-ward positioning beds",
         product: {
           slug: "fowler-bed",
+          image: "/medical_beds/fowler-bed.jpg",
           name: "Fowler Bed — Hydraulic 3 Function",
           tagline: "Reliable positioning for general wards",
           description:
@@ -107,12 +109,14 @@ export const categories: Category[] = [
           icon: "BedDouble",
         },
       },
+
       {
         slug: "semi-fowler-bed",
         name: "Semi-Fowler Bed",
         blurb: "Economical two-function ward beds",
         product: {
           slug: "semi-fowler-bed",
+          image: "/medical_beds/semi-fowler-bed.jpg",
           name: "Semi-Fowler Bed — Manual",
           tagline: "Dependable comfort for everyday ward care",
           description:
@@ -132,12 +136,14 @@ export const categories: Category[] = [
           icon: "BedDouble",
         },
       },
+
       {
         slug: "plain-paediatric-bed",
         name: "Plain / Paediatric Bed",
         blurb: "Fixed-height general and child-care beds",
         product: {
           slug: "plain-paediatric-bed",
+          image: "/medical_beds/plain-paediatric-bed.jpg",
           name: "Paediatric Bed with Collapsible Railings",
           tagline: "Safety-first design for younger patients",
           description:
@@ -157,12 +163,14 @@ export const categories: Category[] = [
           icon: "BedSingle",
         },
       },
+
       {
         slug: "attendant-bed",
         name: "Attendant Bed",
         blurb: "Space-saving folding beds for caregivers",
         product: {
           slug: "attendant-bed",
+          image: "/medical_beds/attendant-bed.jpg",
           name: "Attendant Bed — Folding",
           tagline: "Compact rest solution for patient attendants",
           description:
@@ -181,12 +189,14 @@ export const categories: Category[] = [
           icon: "BedSingle",
         },
       },
+
       {
         slug: "bed-accessories",
         name: "Accessories for Hospital Bed",
         blurb: "Mattresses, IV stands, traction & bed-head panels",
         product: {
           slug: "bed-accessories",
+          image: "/medical_beds/bed-accessories.jpg",
           name: "Bed Accessories Range",
           tagline: "Complete the bedside care environment",
           description:
@@ -202,8 +212,14 @@ export const categories: Category[] = [
               label: "Mattress",
               value: "High-density PU foam, washable cover",
             },
-            { label: "IV Stand", value: "SS304, 5-leg base with castors" },
-            { label: "Traction Frame", value: "MS tubular, powder coated" },
+            {
+              label: "IV Stand",
+              value: "SS304, 5-leg base with castors",
+            },
+            {
+              label: "Traction Frame",
+              value: "MS tubular, powder coated",
+            },
           ],
           icon: "HeartPulse",
         },
@@ -227,6 +243,7 @@ export const categories: Category[] = [
         blurb: "Storage units for patient bedside essentials",
         product: {
           slug: "bed-side-lockers",
+          image: "/furniture/bed-side-lockers.jpg",
           name: "Bedside Locker — SS Top",
           tagline: "Tidy, hygienic bedside storage",
           description:
@@ -245,12 +262,14 @@ export const categories: Category[] = [
           icon: "Archive",
         },
       },
+
       {
         slug: "over-bed-tables",
         name: "Over Bed Tables",
         blurb: "Adjustable dining & activity tables",
         product: {
           slug: "over-bed-tables",
+          image: "/furniture/over-bed-tables.jpg",
           name: "Over Bed Table — Height Adjustable",
           tagline: "Dining and activity, right at the bedside",
           description:
@@ -269,13 +288,14 @@ export const categories: Category[] = [
           icon: "Table2",
         },
       },
+
       {
         slug: "stretcher-trolleys",
         name: "Stretcher Trolleys",
         blurb: "Patient transport & emergency trolleys",
         product: {
           slug: "stretcher-trolleys",
-          image: "/features_product/stretcher-trolleys.jpg",
+          image: "/furniture/stretcher-trolleys.jpg",
           name: "Hydraulic Stretcher Trolley",
           tagline: "Smooth, safe patient transfer",
           description:
@@ -294,12 +314,14 @@ export const categories: Category[] = [
           icon: "Truck",
         },
       },
+
       {
         slug: "labour-delivery-tables",
         name: "Labour / Delivery Tables",
         blurb: "Obstetric tables for labour rooms",
         product: {
           slug: "labour-delivery-tables",
+          image: "/furniture/labour-delivery-tables.jpg",
           name: "Labour Table — Hydraulic",
           tagline: "Purpose-built for maternity care",
           description:
@@ -318,12 +340,14 @@ export const categories: Category[] = [
           icon: "Table2",
         },
       },
+
       {
         slug: "examination-tables",
         name: "Examination Tables",
         blurb: "OPD & consultation examination couches",
         product: {
           slug: "examination-tables",
+          image: "/furniture/examination-tables.jpg",
           name: "Examination Table — 2 Step",
           tagline: "Everyday reliability for OPDs",
           description:
@@ -342,12 +366,14 @@ export const categories: Category[] = [
           icon: "Stethoscope",
         },
       },
+
       {
         slug: "dialysis-chairs",
         name: "Dialysis Chairs",
         blurb: "Recliner chairs for dialysis therapy",
         product: {
           slug: "dialysis-chairs",
+          image: "/furniture/dialysis-chairs.jpg",
           name: "Dialysis Recliner Chair",
           tagline: "Long-session comfort for patients",
           description:
@@ -366,12 +392,14 @@ export const categories: Category[] = [
           icon: "Armchair",
         },
       },
+
       {
         slug: "carts-trolleys",
         name: "Carts / Trolleys",
         blurb: "Medicine, dressing, crash & utility trolleys",
         product: {
           slug: "carts-trolleys",
+          image: "/furniture/carts-trolleys.jpg",
           name: "Crash Cart / Emergency Trolley",
           tagline: "Ready for critical response",
           description:
@@ -390,12 +418,14 @@ export const categories: Category[] = [
           icon: "ShoppingCart",
         },
       },
+
       {
         slug: "suction-apparatus",
         name: "Suction Apparatus",
         blurb: "Electric & manual suction units",
         product: {
           slug: "suction-apparatus",
+          image: "/furniture/suction-apparatus.jpg",
           name: "Electric Suction Apparatus",
           tagline: "Dependable aspiration for wards & OT",
           description:
@@ -414,12 +444,14 @@ export const categories: Category[] = [
           icon: "Wind",
         },
       },
+
       {
         slug: "wheelchairs",
         name: "Wheelchairs",
         blurb: "Foldable patient mobility chairs",
         product: {
           slug: "wheelchairs",
+          image: "/furniture/wheelchairs.jpg",
           name: "Foldable Wheelchair — Standard",
           tagline: "Everyday mobility, built to last",
           description:
@@ -438,12 +470,14 @@ export const categories: Category[] = [
           icon: "Armchair",
         },
       },
+
       {
         slug: "ward-equipment",
         name: "Ward Equipment",
         blurb: "Screens, stools, racks & general ward gear",
         product: {
           slug: "ward-equipment",
+          image: "/furniture/ward-equipment.jpg",
           name: "Bedside Screen & Ward Essentials",
           tagline: "Everything a ward needs to function",
           description:
@@ -461,12 +495,14 @@ export const categories: Category[] = [
           icon: "LayoutGrid",
         },
       },
+
       {
         slug: "ss-hollowares",
         name: "S.S. Holloware",
         blurb: "Stainless steel trays, bowls & dressing drums",
         product: {
           slug: "ss-hollowares",
+          image: "/furniture/ss-hollowares.jpg",
           name: "SS304 Holloware Set",
           tagline: "Sterile-processing essentials in surgical steel",
           description:
@@ -485,12 +521,14 @@ export const categories: Category[] = [
           icon: "Layers",
         },
       },
+
       {
         slug: "bio-medical-waste-bins",
         name: "Bio Medical Waste Bins",
         blurb: "Color-coded segregation bins",
         product: {
           slug: "bio-medical-waste-bins",
+          image: "/furniture/bio-medical-waste-bins.jpg",
           name: "Bio-Medical Waste Bin — Pedal Type",
           tagline: "Compliant waste segregation, ward to disposal",
           description:
@@ -509,13 +547,14 @@ export const categories: Category[] = [
           icon: "Trash2",
         },
       },
+
       {
         slug: "autoclaves",
         name: "Autoclaves",
         blurb: "Steam sterilisers for CSSD & OT",
         product: {
           slug: "autoclaves",
-          image: "/features_product/autoclaves.jpg",
+          image: "/furniture/autoclaves.jpg",
           name: "Vertical Autoclave Steriliser",
           tagline: "Validated sterility for critical instruments",
           description:
@@ -553,7 +592,7 @@ export const categories: Category[] = [
         blurb: "Premium multi-dome major-OT LED lights",
         product: {
           slug: "80-series-led",
-          image: "/features_product/80-series-led.jpg",
+          image: "/operating_lights/80-series-led.jpg",
           name: "80 Series LED Operating Light",
           tagline: "Flagship illumination for major operation theatres",
           description:
@@ -575,12 +614,14 @@ export const categories: Category[] = [
           icon: "Lightbulb",
         },
       },
+
       {
         slug: "30-series-led",
         name: "30 Series (LED)",
         blurb: "Mid-range LED lights for general OTs",
         product: {
           slug: "30-series-led",
+          image: "/operating_lights/30-series-led.jpg",
           name: "30 Series LED Operating Light",
           tagline: "Dependable illumination for general surgery",
           description:
@@ -599,12 +640,14 @@ export const categories: Category[] = [
           icon: "Lightbulb",
         },
       },
+
       {
         slug: "b4-series-led",
         name: "B4 Series (LED)",
         blurb: "Compact LED lights for minor procedures",
         product: {
           slug: "b4-series-led",
+          image: "/operating_lights/b4-series-led.jpg",
           name: "B4 Series LED Minor OT Light",
           tagline: "Focused light for minor procedure rooms",
           description:
@@ -622,12 +665,14 @@ export const categories: Category[] = [
           icon: "Lightbulb",
         },
       },
+
       {
         slug: "28-series-led",
         name: "28 Series (LED)",
         blurb: "Entry-level LED procedure lights",
         product: {
           slug: "28-series-led",
+          image: "/operating_lights/28-series-led.jpg",
           name: "28 Series LED Procedure Light",
           tagline: "Reliable entry-level surgical illumination",
           description:
@@ -645,13 +690,14 @@ export const categories: Category[] = [
           icon: "Lightbulb",
         },
       },
+
       {
         slug: "examination-lights",
         name: "Examination Lights",
         blurb: "Mobile & wall-mounted LED exam lights",
         product: {
           slug: "examination-lights",
-          image: "/features_product/examination-lights.jpg",
+          image: "/operating_lights/examination-lights.jpg",
           name: "LED Examination Light — Mobile Stand",
           tagline: "Precise, portable illumination for OPDs",
           description:
@@ -688,7 +734,7 @@ export const categories: Category[] = [
         blurb: "Motorised hydraulic multi-section tables",
         product: {
           slug: "electro-hydraulic-operating-table",
-          image: "/features_product/electro-hydraulic-operating-table.jpg",
+          image: "/operating_tables/electro-hydraulic-operating-table.jpg",
           name: "Electro-Hydraulic Operating Table",
           tagline: "Motor-driven precision for complex procedures",
           description:
@@ -709,12 +755,14 @@ export const categories: Category[] = [
           icon: "Table2",
         },
       },
+
       {
         slug: "electric-ot-tables",
         name: "Electric OT Tables",
         blurb: "Fully electric positioning tables",
         product: {
           slug: "electric-ot-tables",
+          image: "/operating_tables/electric-ot-tables.jpg",
           name: "Electric Operating Table",
           tagline: "Smooth, silent, fully electric control",
           description:
@@ -733,12 +781,14 @@ export const categories: Category[] = [
           icon: "Table2",
         },
       },
+
       {
         slug: "hydraulic-operating-tables",
         name: "Hydraulic Operating Tables",
         blurb: "Manual hydraulic general-purpose tables",
         product: {
           slug: "hydraulic-operating-tables",
+          image: "/operating_tables/hydraulic-operating-tables.jpg",
           name: "Hydraulic Operating Table — General Purpose",
           tagline: "Proven hydraulic reliability for general surgery",
           description:
@@ -757,12 +807,14 @@ export const categories: Category[] = [
           icon: "Table2",
         },
       },
+
       {
         slug: "operating-table-accessories",
         name: "Accessories for Operating Tables",
         blurb: "Positioning aids, straps, arm boards & rails",
         product: {
           slug: "operating-table-accessories",
+          image: "/operating_tables/operating-table-accessories.jpg",
           name: "OT Table Accessory Kit",
           tagline: "Configure every table for the procedure at hand",
           description:
@@ -802,6 +854,7 @@ export const categories: Category[] = [
         blurb: "Seamless, antistatic OT flooring systems",
         product: {
           slug: "flooring",
+          image: "/moduler_ots/flooring.jpg",
           name: "Seamless Antistatic OT Flooring",
           tagline: "A hygienic, conductive base for the sterile core",
           description:
@@ -819,12 +872,14 @@ export const categories: Category[] = [
           icon: "LayoutGrid",
         },
       },
+
       {
         slug: "control-panels",
         name: "Control Panels / X-Ray View Box / Writing Board",
         blurb: "OT control, imaging & documentation panels",
         product: {
           slug: "control-panels",
+          image: "/moduler_ots/control-panels.jpg",
           name: "OT Control Panel & X-Ray View Box",
           tagline: "Centralised control at the surgeon's fingertips",
           description:
@@ -842,12 +897,14 @@ export const categories: Category[] = [
           icon: "PanelsTopLeft",
         },
       },
+
       {
         slug: "prd-pass-box",
         name: "PRD / Pass Box / Window",
         blurb: "Interlocked pass boxes for material transfer",
         product: {
           slug: "prd-pass-box",
+          image: "/moduler_ots/prd-pass-box.jpg",
           name: "Interlocked Pass Box",
           tagline: "Contamination-controlled material transfer",
           description:
@@ -865,13 +922,14 @@ export const categories: Category[] = [
           icon: "PackageOpen",
         },
       },
+
       {
         slug: "laminar-ahu",
         name: "Laminar & AHU",
         blurb: "Laminar air flow units & air handling systems",
         product: {
           slug: "laminar-ahu",
-          image: "/features_product/laminar-ahu.jpg",
+          image: "/moduler_ots/laminar-ahu.jpg",
           name: "Laminar Air Flow Unit",
           tagline: "Unidirectional clean air over the surgical field",
           description:
@@ -892,12 +950,14 @@ export const categories: Category[] = [
           icon: "Wind",
         },
       },
+
       {
         slug: "scrub-station",
         name: "Scrub Station",
         blurb: "Touch-free multi-bay scrubbing units",
         product: {
           slug: "scrub-station",
+          image: "/moduler_ots/scrub-station.jpg",
           name: "Touch-Free Scrub Station",
           tagline: "Hands-free hygiene before every procedure",
           description:
@@ -915,12 +975,14 @@ export const categories: Category[] = [
           icon: "Droplets",
         },
       },
+
       {
         slug: "wall-panels",
         name: "Wall Panels",
         blurb: "Seamless antibacterial OT wall cladding",
         product: {
           slug: "wall-panels",
+          image: "/moduler_ots/wall-panels.jpg",
           name: "Modular Antibacterial Wall Panels",
           tagline: "A seamless, sterile shell for the theatre",
           description:
@@ -938,12 +1000,14 @@ export const categories: Category[] = [
           icon: "PanelsTopLeft",
         },
       },
+
       {
         slug: "ot-pendant",
         name: "OT Pendant",
         blurb: "Ceiling-mounted service pendants",
         product: {
           slug: "ot-pendant",
+          image: "/moduler_ots/ot-pendant.jpg",
           name: "Ceiling OT Pendant System",
           tagline: "Gas, power and equipment overhead — organised",
           description:
@@ -961,12 +1025,14 @@ export const categories: Category[] = [
           icon: "Radio",
         },
       },
+
       {
         slug: "doors",
         name: "Doors",
         blurb: "Automatic hermetic & sliding OT doors",
         product: {
           slug: "doors",
+          image: "/moduler_ots/doors.jpg",
           name: "Automatic Hermetic Sliding Door",
           tagline: "Airtight access control for the sterile zone",
           description:
@@ -1003,7 +1069,7 @@ export const categories: Category[] = [
         blurb: "Open-care radiant warming systems for newborns",
         product: {
           slug: "infant-radiant-warmer",
-          image: "/features_product/infant-radiant-warmer.jpg",
+          image: "/neonatal/infant-radiant-warmer.jpg",
           name: "Infant Radiant Warmer — Microprocessor Controlled",
           tagline: "Precise thermal care from the first minute",
           description:
@@ -1026,13 +1092,14 @@ export const categories: Category[] = [
           icon: "ThermometerSun",
         },
       },
+
       {
         slug: "baby-incubator",
         name: "Baby Incubator",
         blurb: "Closed-care incubators for controlled micro-environments",
         product: {
           slug: "baby-incubator",
-          image: "/features_product/baby-incubator.jpg",
+          image: "/neonatal/baby-incubator.jpg",
           name: "Baby Incubator — Microprocessor Controlled",
           tagline: "A controlled micro-environment for vulnerable newborns",
           description:
@@ -1052,12 +1119,14 @@ export const categories: Category[] = [
           icon: "Baby",
         },
       },
+
       {
         slug: "nicu-cpap-machine",
         name: "NICU CPAP Machine",
         blurb: "Non-invasive respiratory support for neonates",
         product: {
           slug: "nicu-cpap-machine",
+          image: "/neonatal/nicu-cpap-machine.jpg",
           name: "NICU CPAP Machine",
           tagline: "Gentle respiratory support for tiny lungs",
           description:
@@ -1076,12 +1145,14 @@ export const categories: Category[] = [
           icon: "Wind",
         },
       },
+
       {
         slug: "phototherapy-unit",
         name: "Phototherapy Unit",
         blurb: "LED phototherapy for neonatal jaundice",
         product: {
           slug: "phototherapy-unit",
+          image: "/neonatal/phototherapy-unit.jpg",
           name: "Phototherapy Unit with Baby Bassinet Trolley",
           tagline: "Effective, low-heat jaundice management",
           description:
@@ -1100,12 +1171,14 @@ export const categories: Category[] = [
           icon: "Sun",
         },
       },
+
       {
         slug: "neonatal-resuscitation",
         name: "Resuscitation & Suction",
         blurb: "Emergency airway & suction equipment for newborns",
         product: {
           slug: "neonatal-resuscitation",
+          image: "/neonatal/neonatal-resuscitation.jpg",
           name: "Neonatal Resuscitation Kit & Suction Machine",
           tagline: "Ready for the critical first moments",
           description:
@@ -1127,12 +1200,14 @@ export const categories: Category[] = [
           icon: "Syringe",
         },
       },
+
       {
         slug: "baby-weighing-scale",
         name: "Baby Weighing Scale",
         blurb: "Digital weighing scales for newborns & infants",
         product: {
           slug: "baby-weighing-scale",
+          image: "/neonatal/baby-weighing-scale.jpg",
           name: "Digital Baby Weighing Scale",
           tagline: "Accurate weight tracking from day one",
           description:

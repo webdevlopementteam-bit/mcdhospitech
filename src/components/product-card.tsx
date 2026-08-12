@@ -12,7 +12,7 @@ export function ProductCard({
 }) {
   const { product } = subcategory;
   const category = getCategory(categorySlug);
-  const image = product.image ?? category?.image;
+  const image = product?.image ?? category?.image;
 
   return (
     <Link

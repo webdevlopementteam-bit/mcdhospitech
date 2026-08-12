@@ -33,6 +33,7 @@ export default async function CategoryPage({
 }) {
   const { category: categorySlug } = await params;
   const category = getCategory(categorySlug);
+
   if (!category) notFound();
   const Icon = getIcon(category.icon);
 

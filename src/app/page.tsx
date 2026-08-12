@@ -392,78 +392,289 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="py-24">
-        <Container>
-          <SectionHeading
-            eyebrow="Get In Touch"
-            title="Let's Talk About Your Hospital's Requirements"
-            description="Product specifications, bulk pricing, custom configurations or export enquiries — our team responds within one business day."
+      <section className="relative overflow-hidden bg-[#f4f8fa] py-20 sm:py-24 lg:py-28">
+        {/* =========================================================
+      BACKGROUND
+  ========================================================= */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-[#dceff1] blur-3xl" />
+          <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#fff0dc] blur-3xl" />
+
+          {/* Grid pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.035]"
+            style={{
+              backgroundImage:
+                "linear-gradient(#123f8a 1px, transparent 1px), linear-gradient(90deg, #123f8a 1px, transparent 1px)",
+              backgroundSize: "45px 45px",
+            }}
           />
+        </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {contactCards.map(({ icon: Icon, title, value, href }) => (
-              <a
-                key={title}
-                href={href}
-                target={href.startsWith("http") ? "_blank" : undefined}
-                rel={
-                  href.startsWith("http") ? "noopener noreferrer" : undefined
-                }
-                className="group rounded-2xl border border-slate-100 p-6 shadow-sm shadow-navy-900/5 transition-all hover:-translate-y-1 hover:shadow-lg"
-              >
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy-50 text-navy-700 transition-colors group-hover:bg-saffron-500 group-hover:text-white">
-                  <Icon className="h-5 w-5" />
+        <Container>
+          <div className="relative">
+            {/* =====================================================
+          TOP HEADER
+      ===================================================== */}
+            <div className="grid items-end gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <div className="mb-5 inline-flex items-center gap-3">
+                  <span className="h-[2px] w-10 bg-[#34acb1]" />
+
+                  <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#34acb1]">
+                    Get In Touch
+                  </span>
                 </div>
-                <h3 className="font-display mt-4 text-sm font-bold text-navy-900">
-                  {title}
-                </h3>
-                <p className="mt-1 text-sm leading-snug text-slate-600">
-                  {value}
-                </p>
-              </a>
-            ))}
-          </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-5">
-            <div className="rounded-[2rem] border border-slate-100 p-8 shadow-sm shadow-navy-900/5 lg:col-span-3">
-              <ContactForm />
+                <h2 className="font-display max-w-3xl text-4xl font-bold leading-[1.08] tracking-tight text-[#0b326d] sm:text-5xl lg:text-[3.6rem]">
+                  Let's Build the Right
+                  <span className="relative ml-2 inline-block text-[#34acb1]">
+                    Hospital Solution.
+                    <span className="absolute -bottom-2 left-0 h-1 w-1/2 rounded-full bg-[#ff9933]" />
+                  </span>
+                </h2>
+              </div>
+
+              <p className="max-w-xl text-sm leading-7 text-slate-500 lg:pb-2 lg:text-base">
+                Product specifications, bulk pricing, custom configurations and
+                export enquiries — tell us what your hospital needs and our team
+                will help you find the right solution.
+              </p>
             </div>
 
-            <div className="rounded-[2rem] bg-navy-900 p-8 text-white lg:col-span-2">
-              <h3 className="font-display text-lg font-bold">Business Hours</h3>
-              <ul className="mt-5 space-y-3 text-sm text-white/70">
-                <li className="flex items-center justify-between">
-                  <span className="flex items-center gap-2">
-                    <Clock className="h-4 w-4 text-saffron-400" />
-                    Monday – Saturday
-                  </span>
-                  <span>9:30 AM – 6:30 PM</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span className="flex items-center gap-2">
-                    <Clock className="h-4 w-4 text-saffron-400" />
-                    Sunday
-                  </span>
-                  <span>Closed</span>
-                </li>
-              </ul>
-              <div className="mt-8 border-t border-white/10 pt-6">
-                <h4 className="font-display text-sm font-bold">
-                  For Urgent Requirements
-                </h4>
-                <p className="mt-2 text-sm text-white/70">
-                  Reach our sales desk directly on WhatsApp for the fastest
-                  response on stock availability and pricing.
-                </p>
+            {/* =====================================================
+          MAIN CONTENT
+      ===================================================== */}
+            <div className="mt-14 grid gap-8 lg:grid-cols-[0.85fr_1.5fr]">
+              {/* ===================================================
+            LEFT — CONTACT INFORMATION
+        =================================================== */}
+              <div className="relative overflow-hidden rounded-[2rem] bg-[#0b326d] p-7 text-white shadow-2xl shadow-[#0b326d]/15 sm:p-9">
+                {/* Decorative shape */}
+                <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full border-[45px] border-white/[0.04]" />
+
+                <div className="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-[#34acb1]/10 blur-2xl" />
+
+                <div className="relative">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#ffb15c]">
+                    Talk To Our Team
+                  </p>
+
+                  <h3 className="font-display mt-3 max-w-sm text-2xl font-bold leading-tight sm:text-3xl">
+                    We're here to help with your hospital requirements.
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-6 text-white/55">
+                    Connect with our team for product details, quotations,
+                    availability and customised hospital equipment solutions.
+                  </p>
+
+                  {/* -----------------------------------------------
+                CONTACT ITEMS
+            ----------------------------------------------- */}
+                  <div className="mt-9 space-y-3">
+                    {contactCards.map(({ icon: Icon, title, value, href }) => (
+                      <a
+                        key={title}
+                        href={href}
+                        target={href.startsWith("http") ? "_blank" : undefined}
+                        rel={
+                          href.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
+                        className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.05] p-4 transition-all duration-300 hover:border-[#34acb1]/40 hover:bg-white/[0.09]"
+                      >
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#34acb1]/15 text-[#63d2d5] transition-all duration-300 group-hover:bg-[#34acb1] group-hover:text-white">
+                          <Icon className="h-4 w-4" />
+                        </div>
+
+                        <div className="min-w-0">
+                          <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/35">
+                            {title}
+                          </p>
+
+                          <p className="mt-1 truncate text-sm font-medium text-white/85">
+                            {value}
+                          </p>
+                        </div>
+
+                        <span className="ml-auto text-white/20 transition-transform group-hover:translate-x-1 group-hover:text-[#ff9933]">
+                          →
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+
+                  {/* -----------------------------------------------
+                BUSINESS HOURS MINI PANEL
+            ----------------------------------------------- */}
+                  <div className="mt-7 border-t border-white/10 pt-7">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#ffb15c]">
+                          Working Hours
+                        </p>
+
+                        <p className="mt-2 text-sm font-semibold text-white">
+                          Monday – Saturday
+                        </p>
+                      </div>
+
+                      <div className="text-right">
+                        <p className="text-sm font-bold text-white">9:30 AM</p>
+
+                        <p className="text-xs text-white/40">to 6:30 PM</p>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 flex items-center gap-2">
+                      <span className="relative flex h-2 w-2">
+                        <span className="absolute h-full w-full animate-ping rounded-full bg-[#34acb1] opacity-60" />
+                        <span className="relative h-2 w-2 rounded-full bg-[#34acb1]" />
+                      </span>
+
+                      <span className="text-[11px] text-white/45">
+                        Our sales team is available during working hours
+                      </span>
+                    </div>
+
+                    <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-4">
+                      <span className="text-xs text-white/40">Sunday</span>
+
+                      <span className="rounded-full bg-white/5 px-3 py-1 text-[9px] font-bold uppercase tracking-wider text-white/35">
+                        Closed
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* -----------------------------------------------
+                TRUST LINE
+            ----------------------------------------------- */}
+                  <div className="mt-7 flex items-center gap-3">
+                    <div className="h-px flex-1 bg-white/10" />
+
+                    <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-white/25">
+                      Hospital Equipment
+                    </span>
+
+                    <div className="h-px flex-1 bg-white/10" />
+                  </div>
+                </div>
+              </div>
+
+              {/* ===================================================
+            RIGHT — ENQUIRY FORM
+        =================================================== */}
+              <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-7 shadow-xl shadow-[#0b326d]/5 sm:p-10">
+                {/* Top color bar */}
+                <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-[#34acb1] via-[#123f8a] to-[#ff9933]" />
+
+                {/* Decorative corner */}
+                <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#34acb1]/5" />
+
+                <div className="relative">
+                  {/* Form Heading */}
+                  <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
+                    <div>
+                      <div className="inline-flex items-center gap-2 rounded-full bg-[#e8f6f7] px-3 py-1.5">
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#34acb1]" />
+
+                        <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#247f83]">
+                          Send An Enquiry
+                        </span>
+                      </div>
+
+                      <h3 className="font-display mt-4 text-2xl font-bold text-[#0b326d] sm:text-3xl">
+                        Tell Us What You Need
+                      </h3>
+
+                      <p className="mt-2 max-w-lg text-sm leading-6 text-slate-500">
+                        Share your requirements and our team will get back to
+                        you with suitable products and pricing.
+                      </p>
+                    </div>
+
+                    {/* Small badge */}
+                    <div className="hidden rounded-2xl border border-[#ff9933]/20 bg-[#fff7ed] px-4 py-3 text-right sm:block">
+                      <p className="text-[9px] font-bold uppercase tracking-wider text-[#c66a00]">
+                        Response
+                      </p>
+
+                      <p className="mt-1 text-sm font-bold text-[#0b326d]">
+                        Within 1 Business Day
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Divider */}
+                  <div className="my-8 flex items-center gap-3">
+                    <div className="h-px flex-1 bg-slate-100" />
+
+                    <div className="flex gap-1">
+                      <span className="h-1 w-6 rounded-full bg-[#34acb1]" />
+                      <span className="h-1 w-2 rounded-full bg-[#ff9933]" />
+                    </div>
+
+                    <div className="h-px flex-1 bg-slate-100" />
+                  </div>
+
+                  {/* Form */}
+                  <ContactForm />
+
+                  {/* Bottom note */}
+                  <div className="mt-7 flex items-start gap-3 border-t border-slate-100 pt-5">
+                    <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#e8f6f7] text-[#34acb1]">
+                      ✓
+                    </div>
+
+                    <p className="text-xs leading-5 text-slate-400">
+                      Your enquiry is handled by our sales team. We can assist
+                      with product specifications, bulk orders, customised
+                      configurations and export requirements.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* =====================================================
+          BOTTOM CTA STRIP
+      ===================================================== */}
+            <div className="relative mt-8 overflow-hidden rounded-[1.75rem] bg-white shadow-lg shadow-slate-900/5">
+              <div className="flex flex-col gap-5 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-7">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#fff0dc] text-[#ff9933]">
+                    <MessageCircle className="h-5 w-5" />
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-bold text-[#0b326d]">
+                      Need an immediate response?
+                    </p>
+
+                    <p className="mt-1 text-xs text-slate-500">
+                      Chat directly with our sales team on WhatsApp.
+                    </p>
+                  </div>
+                </div>
+
                 <a
                   href={`https://wa.me/${site.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-500"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#ff9933] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#ff9933]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#f28b20] hover:shadow-xl"
                 >
                   <MessageCircle className="h-4 w-4" />
                   Chat on WhatsApp
                 </a>
+              </div>
+
+              {/* Bottom accent */}
+              <div className="flex h-1">
+                <div className="flex-1 bg-[#34acb1]" />
+                <div className="w-24 bg-[#123f8a]" />
+                <div className="w-16 bg-[#ff9933]" />
               </div>
             </div>
           </div>
