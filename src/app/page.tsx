@@ -32,39 +32,15 @@ import { categories, getSubcategory } from "@/lib/products";
 import { site } from "@/lib/site";
 
 const featured = [
-  ["medical-beds", "icu-bed", "/features_product/ICUBED_ICU Bed.jpg"],
-  [
-    "neonatal-nicu-care",
-    "baby-incubator",
-    "/features_product/Baby_Incubator.jpg",
-  ],
-  [
-    "operating-lights",
-    "80-series-led",
-    "/features_product/80_Series_(LED).jpg",
-  ],
-  [
-    "operating-tables",
-    "electro-hydraulic-operating-table",
-    "/features_product/Electro_Hydraulic_Operating_Table.jpg",
-  ],
-  [
-    "neonatal-nicu-care",
-    "infant-radiant-warmer",
-    "/features_product/Infant Radiant Warmer.jpg",
-  ],
-  [
-    "medical-furniture",
-    "stretcher-trolleys",
-    "/features_product/Stretcher Trolleys.jpg",
-  ],
-  ["modular-ots", "laminar-ahu", "/features_product/Laminar & AHU.jpg"],
-  [
-    "operating-lights",
-    "examination-lights",
-    "/features_product/Examination Lights.jpg",
-  ],
-  ["medical-furniture", "autoclaves", "/features_product/autoclaves.jpg"],
+  ["medical-beds", "icu-bed"],
+  ["neonatal-nicu-care", "baby-incubator"],
+  ["operating-lights", "80-series-led"],
+  ["operating-tables", "electro-hydraulic-operating-table"],
+  ["neonatal-nicu-care", "infant-radiant-warmer"],
+  ["medical-furniture", "stretcher-trolleys"],
+  ["modular-ots", "laminar-ahu"],
+  ["operating-lights", "examination-lights"],
+  ["medical-furniture", "autoclaves"],
 ] as const;
 
 const yearsActive = new Date().getFullYear() - Number(site.founded);
@@ -337,7 +313,7 @@ export default function Home() {
             description="A snapshot of our flagship product lines — each one built for durability, safety and everyday clinical performance."
           />
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map(([categorySlug, subcategorySlug, image]) => {
+            {featured.map(([categorySlug, subcategorySlug]) => {
               const { subcategory } = getSubcategory(
                 categorySlug,
                 subcategorySlug,
@@ -348,7 +324,6 @@ export default function Home() {
                   key={subcategorySlug}
                   categorySlug={categorySlug}
                   subcategory={subcategory}
-                  image={image}
                 />
               );
             })}

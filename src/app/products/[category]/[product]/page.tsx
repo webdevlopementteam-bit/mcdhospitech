@@ -6,7 +6,6 @@ import { Container } from "@/components/container";
 import { SectionHeading } from "@/components/section-heading";
 import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/button";
-import { getIcon } from "@/lib/icon-map";
 import { categories, getSubcategory } from "@/lib/products";
 import { site } from "@/lib/site";
 import Image from "next/image";
@@ -42,10 +41,10 @@ export default async function ProductPage({
   if (!category || !subcategory) notFound();
 
   const item = subcategory.product;
-  // console.log("item", item);
-
-  const image = category.image;
-  // console.log("img", image);
+  const image = item.image ?? category.image;
+  const related = category.subcategories
+    .filter((s) => s.slug !== subcategory.slug)
+    .slice(0, 3);
 
   return (
     <>
@@ -144,7 +143,7 @@ export default async function ProductPage({
         </Container>
       </section>
 
-      {/* <section className="bg-navy-50 py-16">
+      <section className="bg-navy-50 py-16">
         <Container>
           <SectionHeading eyebrow="Technical Data" title="Specifications" />
           <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white">
@@ -170,9 +169,9 @@ export default async function ProductPage({
             datasheet.
           </p>
         </Container>
-      </section> */}
+      </section>
 
-      {/* {related.length > 0 ? (
+      {related.length > 0 ? (
         <section className="py-16">
           <Container>
             <SectionHeading
@@ -190,7 +189,7 @@ export default async function ProductPage({
             </div>
           </Container>
         </section>
-      ) : null} */}
+      ) : null}
     </>
   );
 }

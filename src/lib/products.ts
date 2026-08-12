@@ -8,6 +8,7 @@ export type Product = {
   features: string[];
   specs: Spec[];
   icon: string;
+  image?: string;
 };
 
 export type Subcategory = {
@@ -55,6 +56,7 @@ export const categories: Category[] = [
         blurb: "Multi-function electric & manual critical-care beds",
         product: {
           slug: "icu-bed",
+          image: "/features_product/icu-bed.jpg",
           name: "ICU Bed — 5 Function Electric",
           tagline: "Critical-care positioning at the touch of a button",
           description:
@@ -273,6 +275,7 @@ export const categories: Category[] = [
         blurb: "Patient transport & emergency trolleys",
         product: {
           slug: "stretcher-trolleys",
+          image: "/features_product/stretcher-trolleys.jpg",
           name: "Hydraulic Stretcher Trolley",
           tagline: "Smooth, safe patient transfer",
           description:
@@ -512,6 +515,7 @@ export const categories: Category[] = [
         blurb: "Steam sterilisers for CSSD & OT",
         product: {
           slug: "autoclaves",
+          image: "/features_product/autoclaves.jpg",
           name: "Vertical Autoclave Steriliser",
           tagline: "Validated sterility for critical instruments",
           description:
@@ -549,6 +553,7 @@ export const categories: Category[] = [
         blurb: "Premium multi-dome major-OT LED lights",
         product: {
           slug: "80-series-led",
+          image: "/features_product/80-series-led.jpg",
           name: "80 Series LED Operating Light",
           tagline: "Flagship illumination for major operation theatres",
           description:
@@ -646,6 +651,7 @@ export const categories: Category[] = [
         blurb: "Mobile & wall-mounted LED exam lights",
         product: {
           slug: "examination-lights",
+          image: "/features_product/examination-lights.jpg",
           name: "LED Examination Light — Mobile Stand",
           tagline: "Precise, portable illumination for OPDs",
           description:
@@ -682,6 +688,7 @@ export const categories: Category[] = [
         blurb: "Motorised hydraulic multi-section tables",
         product: {
           slug: "electro-hydraulic-operating-table",
+          image: "/features_product/electro-hydraulic-operating-table.jpg",
           name: "Electro-Hydraulic Operating Table",
           tagline: "Motor-driven precision for complex procedures",
           description:
@@ -864,6 +871,7 @@ export const categories: Category[] = [
         blurb: "Laminar air flow units & air handling systems",
         product: {
           slug: "laminar-ahu",
+          image: "/features_product/laminar-ahu.jpg",
           name: "Laminar Air Flow Unit",
           tagline: "Unidirectional clean air over the surgical field",
           description:
@@ -995,6 +1003,7 @@ export const categories: Category[] = [
         blurb: "Open-care radiant warming systems for newborns",
         product: {
           slug: "infant-radiant-warmer",
+          image: "/features_product/infant-radiant-warmer.jpg",
           name: "Infant Radiant Warmer — Microprocessor Controlled",
           tagline: "Precise thermal care from the first minute",
           description:
@@ -1023,6 +1032,7 @@ export const categories: Category[] = [
         blurb: "Closed-care incubators for controlled micro-environments",
         product: {
           slug: "baby-incubator",
+          image: "/features_product/baby-incubator.jpg",
           name: "Baby Incubator — Microprocessor Controlled",
           tagline: "A controlled micro-environment for vulnerable newborns",
           description:

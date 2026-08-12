@@ -1,46 +1,44 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-
-import type { Subcategory } from "@/lib/products";
+import { getCategory, type Subcategory } from "@/lib/products";
 
 export function ProductCard({
   categorySlug,
   subcategory,
-  image,
 }: {
   categorySlug: string;
   subcategory: Subcategory;
-  image: string;
 }) {
-  console.log("image is", image);
+  const { product } = subcategory;
+  const category = getCategory(categorySlug);
+  const image = product.image ?? category?.image;
+
   return (
     <Link
-      href={`/products/${categorySlug}/${subcategory.slug}?`}
+      href={`/products/${categorySlug}/${subcategory.slug}`}
       className="group flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm shadow-navy-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy-900/10"
     >
-      {/* Product Image */}
       <div className="relative h-60 overflow-hidden bg-slate-50">
-        <Image
-          src={image}
-          alt={subcategory.product.name}
-          fill
-          className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-
-        {/* Bottom Overlay */}
+        {image ? (
+          <Image
+            src={image}
+            alt={product.name}
+            fill
+            className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        ) : null}
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/10 to-transparent" />
       </div>
 
-      {/* Content */}
       <div className="flex flex-1 flex-col p-6">
         <p className="text-xs font-semibold uppercase tracking-wider text-saffron-600">
           {subcategory.name}
         </p>
 
         <h3 className="font-display mt-1.5 text-base font-bold text-navy-900">
-          {subcategory.product.name}
+          {product.name}
         </h3>
 
         <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
