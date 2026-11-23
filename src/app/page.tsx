@@ -185,12 +185,18 @@ export default function Home() {
                 &amp; Medium Enterprise (MSME).
               </p>
               <p>
-                The company is named in honour of{" "}
+                MCD Hospitech is named in honour of{" "}
                 <span className="font-semibold text-navy-800">
                   Maa Chandrakala Devi
                 </span>
-                , the founder&apos;s mother — a name that carries the same care
-                and trust we bring to every hospital we equip.
+                , the beloved mother-in-law of our founder, Mrs. Sadhna Singh
+                (wife of Mr. Sanjay Singh). Her name represents a legacy of
+                care, compassion and trust — values that continue to inspire
+                our commitment to equipping healthcare institutions with
+                excellence, reliability and dedication.
+              </p>
+              <p className="font-semibold text-navy-800">
+                Her name is our inspiration; your trust is our legacy.
               </p>
             </div>
 

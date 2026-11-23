@@ -5,10 +5,10 @@ export const site = {
   description:
     "MCD Hospitech is a New Delhi based medical technology manufacturer, established in 2011, specialising in NICU & neonatal care equipment, LED surgical lights, operating tables, hospital furniture and modular operation theatres.",
   founded: "2011",
-  phone: "+91 98765 43210",
-  phoneHref: "tel:+919876543210",
-  whatsapp: "919876543210",
-  email: "info@mcdhospitech.com",
+  phone: "+91 93138 00197",
+  phoneHref: "tel:+919313800197",
+  whatsapp: "918368606034",
+  email: "advssnagvanshi@gmail.com",
   address: "New Delhi, India (Head Office) · Mumbai, India (Operations & Warehouse)",
   social: {
     linkedin: "#",

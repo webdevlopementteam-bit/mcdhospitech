@@ -33,9 +33,6 @@ export const metadata: Metadata = {
     "modular operation theatre",
     "MCD Hospitech",
   ],
-  icons: {
-    icon: "/logo.jpeg",
-  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

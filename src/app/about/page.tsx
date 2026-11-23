@@ -29,7 +29,7 @@ const milestones = [
     year: site.founded,
     title: "A Name Rooted in Care",
     description:
-      "Founded in New Delhi and named in honour of Maa Chandrakala Devi, the founder's mother — carrying her care into every product we build.",
+      "Founded in New Delhi and named in honour of Maa Chandrakala Devi, the beloved mother-in-law of our founder, Mrs. Sadhna Singh — carrying her care into every product we build.",
   },
   {
     year: "MSME",
@@ -122,13 +122,21 @@ export default function AboutPage() {
             <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
               <p>
                 MCD Hospitech was founded in August {site.founded} in New
-                Delhi as a Micro, Small &amp; Medium Enterprise (MSME). The
-                company is named in honour of{" "}
+                Delhi as a Micro, Small &amp; Medium Enterprise (MSME).
+              </p>
+              <p>
+                MCD Hospitech is named in honour of{" "}
                 <span className="font-semibold text-navy-800">
                   Maa Chandrakala Devi
                 </span>
-                , the founder&apos;s mother — a name that reflects the same
-                trust and care we bring to every hospital we equip.
+                , the beloved mother-in-law of our founder, Mrs. Sadhna Singh
+                (wife of Mr. Sanjay Singh). Her name represents a legacy of
+                care, compassion and trust — values that continue to inspire
+                our commitment to equipping healthcare institutions with
+                excellence, reliability and dedication.
+              </p>
+              <p className="font-semibold text-navy-800">
+                Her name is our inspiration; your trust is our legacy.
               </p>
               <p>
                 Our mission is guided by the Sanskrit slogan{" "}
